@@ -28,45 +28,30 @@
 - [JSON Server](https://github.com/typicode/json-server) - Full fake REST API with zero coding in less than 30 seconds.
 - [Vite](https://vitejs.dev) - Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects.
 
-## TASK MANAGEMENT
-
-
 ## GETTING STARTED
 
-
-### Installation and Setup
-
-- Clone the repository
+* Clone the repository
 
 ```bash
 git clone https://github.com/huynhthikimtrung321/react-training.git
-
-- Move to the cloned repository folder
-
-```bash
-cd training-react
 ```
 
-- Checkout to branch `practice`
+* Move to folder `practice` 
 
 ```bash
-git checkout practice
+cd React-Training/practice
 ```
 
-- Move to folder `practice`
+* Edit the content of env.sample and rename it into .env
 
-```bash
-cd practice
-```
-
-- Install packages
+* Install packages
 
 ```bash
 npm install
 ```
 
-- Run the app
+* Run the server
 
 ```bash
-npm run dev
+npm start
 ```
