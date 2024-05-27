@@ -1,35 +1,35 @@
-.button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
+@import url('../style/main.css');
+
+.button-border-default {
+  border: 1px solid transparent;
 }
 
-.button--primary {
-  color: white;
-  background-color: #1ea7fd;
-}
-
-.button--secondary {
-  color: #333;
+.button--ghost {
+  color: var(--color-tertiary);
+  border-radius: 5px;
   background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  font-size: 30px;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.button--outline {
+  margin: 3px;
+  background-color: transparent;
+
+  &:hover {
+    border-radius: 2px;
+    border: 1px solid var(--color-primary);
+  }
 }
 
 .button--small {
-  font-size: 12px;
-  padding: 10px 16px;
+  padding: 2px 7px;
 }
 
 .button--medium {
-  font-size: 14px;
+  font-size: var(--font-size-xm);
   padding: 11px 20px;
-}
-
-.button--large {
-  font-size: 16px;
-  padding: 12px 24px;
 }
