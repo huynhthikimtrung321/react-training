@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["storybook-static/src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
