@@ -14,8 +14,7 @@
 
 ## TARGET
 
-- Understand and apply knowledge of HTML5, CSS3, JavaScript (with ES6 syntax).
-- Understand and apply TypeScript in React.
+- Build component and apply storybook into practice
 
 ## TECHNICAL STACK
 
@@ -25,7 +24,7 @@
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - JavaScript is a lightweight interpreted programming language with first-class functions.
 - [TypeScript](https://www.typescriptlang.org) - TypeScript is an object-oriented programming language developed by Microsoft Corporation, and it is a subset of JavaScript.
 - [Eslint](https://eslint.org) - ESLint is a static code analysis tool for identifying problematic patterns found in JavaScript code.
-- [JSON Server](https://github.com/typicode/json-server) - Full fake REST API with zero coding in less than 30 seconds.
+- [Mock API](https://mockapi.io/projects)
 - [Vite](https://vitejs.dev) - Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects.
 
 ## GETTING STARTED
