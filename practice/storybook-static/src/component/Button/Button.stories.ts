@@ -29,5 +29,6 @@ export const Outline: Story = {
   args: {
     variant: 'outline',
     label: 'All',
+    size: 'small',
   },
 };
