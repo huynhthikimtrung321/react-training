@@ -17,7 +17,7 @@ export const CartItem = ({
 
   return (
     <li className="cart-item" {...props}>
-      <Checkbox isChecked={isCompleted} onChange={function (): void {} } />
+      <Checkbox variant="primary" isChecked={isCompleted} onChange={function (): void {} } />
       <p className={`cart-label ${completedLabelClass}`}>{value}</p>
     </li>
   );
