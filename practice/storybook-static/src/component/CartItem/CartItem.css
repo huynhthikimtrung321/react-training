@@ -1,0 +1,19 @@
+.cart-item {
+  display: flex;
+  height: 65px;
+  min-width: 230px;
+  align-items: center;
+  gap: 10px;
+  cursor: default;
+  background-color: var(--color-base);
+  border-bottom: 1px solid #ededed;
+}
+
+.cart-label {
+  font-size: var(--font-size-m);
+}
+
+.completed-label {
+  text-decoration: line-through;
+  color: var(--color-tertiary);
+}
