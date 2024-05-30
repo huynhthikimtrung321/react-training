@@ -1,25 +1,26 @@
 import './Checkbox.css';
 
 interface CheckboxProps {
-  isChecked: boolean,
-  onChange: () => void,
-  variant?: 'primary' | 'secondary';
+  isChecked: boolean;
+  className?: string;
+  variant?: 'primary' | 'select-all';
+  onChange: () => void;
 }
 
 export const Checkbox = ({
   isChecked,
-  onChange,
+  className,
   variant,
-  ...props
-
+  onChange,
 }: CheckboxProps) => {
-  const mode = variant === 'primary' ? 'checkbox-primary' : 'checkbox-secondary';
+  const mode =
+    variant === 'primary' ? 'checkbox-primary' : 'checkbox-select-all';
   return (
-    <input type="checkbox"
-    className={[mode].join(' ')}
-    checked={isChecked}
-    onChange={onChange}
-    {...props}
+    <input
+      type="checkbox"
+      className={[mode, className].join(' ')}
+      checked={isChecked}
+      onChange={onChange}
     />
-  )
-}
+  );
+};

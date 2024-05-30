@@ -23,7 +23,7 @@ export const Primary: Story = {
 
 export const SelectAll: Story = {
   args: {
-    variant: 'secondary',
+    variant: 'select-all',
     isChecked: false,
     onChange: () => {},
   },

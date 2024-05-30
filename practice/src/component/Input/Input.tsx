@@ -1,4 +1,4 @@
-import './Input.css'
+import './Input.css';
 
 interface InputProps {
   value: string;
@@ -14,8 +14,6 @@ export const Input = ({
   type,
   onChange,
   onKeyDown,
-...props
-
 }: InputProps) => {
   return (
     <input
@@ -25,7 +23,6 @@ export const Input = ({
       value={value}
       onChange={onChange}
       onKeyDown={onKeyDown}
-      {...props}
     />
-  )
-}
+  );
+};

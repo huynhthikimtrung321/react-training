@@ -15,7 +15,6 @@ export const Button = ({
   borderColor,
   label,
   icon,
-  ...props
 }: ButtonProps) => {
   const mode = variant === 'ghost' ? 'button--ghost' : 'button--outline';
   return (
@@ -23,7 +22,6 @@ export const Button = ({
       type="button"
       className={['button-border-default', `button--${size}`, mode].join(' ')}
       style={{ borderColor }}
-      {...props}
     >
       {icon ? icon : label}
     </button>
