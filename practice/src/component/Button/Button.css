@@ -5,13 +5,12 @@
 }
 
 .button--ghost {
-  color: var(--color-tertiary);
-  border-radius: 5px;
-  background-color: transparent;
-  font-size: 30px;
-
-  &:hover {
+  &.hover-color:hover {
     color: var(--color-primary);
+  }
+
+  &.hover-underline:hover {
+    text-decoration: underline;
   }
 }
 
@@ -30,6 +29,6 @@
 }
 
 .button--medium {
-  font-size: var(--font-size-xm);
-  padding: 11px 20px;
+  font-size: 30px;
+  padding: 11px 20px 10px;
 }

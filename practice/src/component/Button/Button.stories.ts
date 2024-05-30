@@ -22,6 +22,8 @@ export const Ghost: Story = {
   args: {
     variant: 'ghost',
     icon: 'x',
+    hover: 'color',
+    color: 'tertiary',
   },
 };
 
@@ -30,5 +32,6 @@ export const Outline: Story = {
     variant: 'outline',
     label: 'All',
     size: 'small',
+    isActive: false,
   },
 };
