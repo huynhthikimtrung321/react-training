@@ -1,4 +1,4 @@
-@import url('../style/main.css');
+@import url('../styles/main.css');
 
 .button-border-default {
   border: 1px solid transparent;
@@ -24,6 +24,10 @@
   }
 }
 
+.button-active {
+  box-shadow: 1px 1px 3px 2px var(--color-primary);
+}
+
 .button--small {
   padding: 2px 7px;
 }
@@ -31,4 +35,8 @@
 .button--medium {
   font-size: 30px;
   padding: 11px 20px 10px;
+}
+
+.hover-cursor-pointer:hover {
+  cursor: pointer;
 }
