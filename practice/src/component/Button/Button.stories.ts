@@ -35,3 +35,12 @@ export const Outline: Story = {
     isActive: false,
   },
 };
+
+export const OutlineActive: Story = {
+  args: {
+    variant: 'outline',
+    label: 'All',
+    size: 'small',
+    isActive: true,
+  },
+};

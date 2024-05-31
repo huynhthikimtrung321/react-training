@@ -30,7 +30,7 @@
   content: '❯';
   background-color: var(--color-base);
   font-size: var(--font-size-m);
-  padding: 11px 25px;
+  padding: 11px 25px 10px;
   transform: rotate(90deg);
 }
 

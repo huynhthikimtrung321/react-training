@@ -13,18 +13,38 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const PrimaryChecked: Story = {
+  args: {
+    variant: 'primary',
+    isChecked: true,
+    onChange: () => {},
+    onClick: () => {},
+  },
+};
+
+export const PrimaryNotChecked: Story = {
   args: {
     variant: 'primary',
     isChecked: false,
     onChange: () => {},
+    onClick: () => {},
   },
 };
 
-export const SelectAll: Story = {
+export const SelectAllChecked: Story = {
+  args: {
+    variant: 'select-all',
+    isChecked: true,
+    onChange: () => {},
+    onClick: () => {},
+  },
+};
+
+export const SelectAllNotChecked: Story = {
   args: {
     variant: 'select-all',
     isChecked: false,
     onChange: () => {},
+    onClick: () => {},
   },
 };
