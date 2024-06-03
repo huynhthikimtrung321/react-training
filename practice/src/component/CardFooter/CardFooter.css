@@ -1,0 +1,12 @@
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  gap: 35px;
+}
+
+.todo-item-left {
+  font-size: var(--font-size-s);
+  margin: 0;
+}
