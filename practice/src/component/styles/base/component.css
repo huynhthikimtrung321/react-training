@@ -1,0 +1,11 @@
+.color-default {
+  color: black;
+}
+
+.color-tertiary {
+  color: var(--color-tertiary);
+}
+
+.background-color-transparent {
+  background-color: transparent;
+}
