@@ -1,35 +1,42 @@
-.button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
+@import url('../styles/main.css');
+
+.button-border-default {
+  border: 1px solid transparent;
 }
 
-.button--primary {
-  color: white;
-  background-color: #1ea7fd;
+.button--ghost {
+  &.hover-color:hover {
+    color: var(--color-primary);
+  }
+
+  &.hover-underline:hover {
+    text-decoration: underline;
+  }
 }
 
-.button--secondary {
-  color: #333;
+.button--outline {
+  margin: 3px;
   background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+
+  &:hover {
+    border-radius: 2px;
+    border: 1px solid var(--color-primary);
+  }
+}
+
+.button-active {
+  box-shadow: 1px 1px 3px 2px var(--color-primary);
 }
 
 .button--small {
-  font-size: 12px;
-  padding: 10px 16px;
+  padding: 2px 7px;
 }
 
 .button--medium {
-  font-size: 14px;
-  padding: 11px 20px;
+  font-size: 30px;
+  padding: 11px 20px 10px;
 }
 
-.button--large {
-  font-size: 16px;
-  padding: 12px 24px;
+.hover-cursor-pointer:hover {
+  cursor: pointer;
 }
