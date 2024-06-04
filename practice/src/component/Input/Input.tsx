@@ -1,10 +1,11 @@
+import { ChangeEvent } from 'react';
 import './Input.css';
 
 interface InputProps {
   value: string;
   placeholder?: string;
   type: string;
-  onChange: () => void;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   onKeyDown: () => void;
 }
 

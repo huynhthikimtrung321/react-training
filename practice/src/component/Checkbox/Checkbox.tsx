@@ -5,7 +5,6 @@ export interface CheckboxProps {
   className?: string;
   variant?: 'primary' | 'select-all';
   onChange: () => void;
-  onClick: () => void;
 }
 
 export const Checkbox = ({
@@ -13,7 +12,6 @@ export const Checkbox = ({
   className,
   variant,
   onChange,
-  onClick,
 }: CheckboxProps) => {
   const mode =
     variant === 'primary' ? 'checkbox-primary' : 'checkbox-select-all';
@@ -23,7 +21,6 @@ export const Checkbox = ({
       className={[mode, className].join(' ')}
       checked={isChecked}
       onChange={onChange}
-      onClick={onClick}
     />
   );
 };
