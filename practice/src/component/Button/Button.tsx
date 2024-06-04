@@ -1,7 +1,10 @@
+import { MouseEvent } from 'react';
+
 import './Button.css';
 
 interface ButtonProps {
   label?: string;
+  value?: string;
   hover?: 'color' | 'underline';
   color?: 'default' | 'tertiary';
   variant?: 'ghost' | 'outline';
@@ -9,11 +12,12 @@ interface ButtonProps {
   size?: 'small' | 'medium';
   isActive?: boolean;
   icon?: React.ReactNode;
-  onClick?: () => void;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const Button = ({
   variant = 'ghost',
+  value,
   hover,
   color = 'default',
   size = 'medium',
@@ -29,6 +33,7 @@ export const Button = ({
   return (
     <button
       type="button"
+      value={value}
       className={[
         'button-border-default',
         hoverClass,

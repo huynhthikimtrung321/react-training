@@ -1,23 +1,19 @@
-import { Filter, Item } from '../../type';
+import { Filter } from '../../type';
 import { Button } from '..';
 import './CardFooter.css';
 import { Dispatch, MouseEvent } from 'react';
 
 interface CardFooterProps {
-  items: Item[];
+  activeItemsLength: number;
   filters: Filter[];
   setFilters: Dispatch<React.SetStateAction<Filter[]>>;
 }
 
 export const CardFooter = ({
-  items = [],
+  activeItemsLength,
   filters,
   setFilters,
 }: CardFooterProps) => {
-  const activeItemsLength = items.filter(
-    item => item.isCompleted === false
-  ).length;
-
   const handleClickFilter = (event: MouseEvent<HTMLButtonElement>) => {
     const filterBtn = event.target as HTMLButtonElement;
     const filterValue = filterBtn.value;
