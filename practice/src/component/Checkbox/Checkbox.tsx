@@ -1,11 +1,11 @@
+import { ChangeEvent } from 'react';
 import './Checkbox.css';
 
 export interface CheckboxProps {
   isChecked: boolean;
   className?: string;
   variant?: 'primary' | 'select-all';
-  onChange: () => void;
-  onClick: () => void;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Checkbox = ({
@@ -13,7 +13,6 @@ export const Checkbox = ({
   className,
   variant,
   onChange,
-  onClick,
 }: CheckboxProps) => {
   const mode =
     variant === 'primary' ? 'checkbox-primary' : 'checkbox-select-all';
@@ -23,7 +22,6 @@ export const Checkbox = ({
       className={[mode, className].join(' ')}
       checked={isChecked}
       onChange={onChange}
-      onClick={onClick}
     />
   );
 };
