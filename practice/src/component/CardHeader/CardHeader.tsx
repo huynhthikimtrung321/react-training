@@ -2,11 +2,11 @@ import { Item } from '../../type';
 import { Checkbox, Input } from '..';
 
 import './CardHeader.css';
-import { Dispatch, useState, ChangeEvent } from 'react';
+import { useState, ChangeEvent } from 'react';
 
 interface CardHeaderProps {
   items: Item[];
-  setItems: Dispatch<React.SetStateAction<Item[]>>;
+  setItems: (item: Item[]) => void;
 }
 
 export const CardHeader = ({ items, setItems }: CardHeaderProps) => {
@@ -38,7 +38,7 @@ export const CardHeader = ({ items, setItems }: CardHeaderProps) => {
         type="text"
         placeholder="What needs to be done?"
         onChange={handleInputChange}
-        onKeyDown={() => {}}
+        onKeyDown={() => {}} // Implement later, need api service
       />
     </div>
   );
