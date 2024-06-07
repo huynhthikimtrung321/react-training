@@ -1,4 +1,4 @@
-import { CardTodo } from './component/CardTodo/CardTodo';
+import { CardTodo } from './component';
 
 const App = () => {
   return (
