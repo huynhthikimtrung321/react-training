@@ -1,0 +1,32 @@
+.cart-item {
+  display: flex;
+  position: relative;
+  height: 65px;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  cursor: default;
+  background-color: var(--color-base);
+  border-bottom: 1px solid #ededed;
+
+  &:hover .button-delete {
+    display: block;
+  }
+}
+
+.cart-label {
+  font-size: var(--font-size-m);
+}
+
+.completed-label {
+  text-decoration: line-through;
+  color: var(--color-tertiary);
+}
+
+.button-delete {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: none;
+}

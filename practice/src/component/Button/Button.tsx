@@ -18,6 +18,7 @@ interface ButtonProps {
 
 export const Button = ({
   variant = 'ghost',
+  value = '',
   hover,
   color = 'default',
   size = 'medium',

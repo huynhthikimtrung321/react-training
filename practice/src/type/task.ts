@@ -5,7 +5,12 @@ const { VALUE_ACTIVE, VALUE_ALL, VALUE_COMPLETED } = FILTER_VALUE;
 
 export interface Item {
   id: string;
-  content: string;
+  name: string;
+  isCompleted: boolean;
+}
+
+export interface ItemData {
+  name: string;
   isCompleted: boolean;
 }
 
