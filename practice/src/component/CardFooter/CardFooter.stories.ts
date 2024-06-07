@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react/*';
 import { CardFooter } from '..';
-import { Filter } from 'src/type';
 
 const meta = {
   title: 'Card/CardFooter',
