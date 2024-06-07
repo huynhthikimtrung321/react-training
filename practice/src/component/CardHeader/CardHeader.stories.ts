@@ -14,5 +14,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    items: [],
+    setItems: () => {},
+    fetchItems: () => new Promise(() => {}),
+  },
 };

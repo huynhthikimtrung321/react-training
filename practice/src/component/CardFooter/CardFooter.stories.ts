@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react/*';
 import { CardFooter } from '..';
+import { Filter } from 'src/type';
 
 const meta = {
   title: 'Card/CardFooter',
@@ -14,5 +15,10 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    items: [],
+    filters: [],
+    setFilters: () => {},
+    fetchItems: () => new Promise(() => {}),
+  },
 };

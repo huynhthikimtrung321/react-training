@@ -18,7 +18,6 @@ export const PrimaryChecked: Story = {
     variant: 'primary',
     isChecked: true,
     onChange: () => {},
-    onClick: () => {},
   },
 };
 
@@ -27,7 +26,6 @@ export const PrimaryNotChecked: Story = {
     variant: 'primary',
     isChecked: false,
     onChange: () => {},
-    onClick: () => {},
   },
 };
 
@@ -36,7 +34,6 @@ export const SelectAllChecked: Story = {
     variant: 'select-all',
     isChecked: true,
     onChange: () => {},
-    onClick: () => {},
   },
 };
 
@@ -45,6 +42,5 @@ export const SelectAllNotChecked: Story = {
     variant: 'select-all',
     isChecked: false,
     onChange: () => {},
-    onClick: () => {},
   },
 };
