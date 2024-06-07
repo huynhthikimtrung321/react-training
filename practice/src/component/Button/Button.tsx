@@ -12,6 +12,7 @@ interface ButtonProps {
   size?: 'small' | 'medium';
   isActive?: boolean;
   icon?: React.ReactNode;
+  className?: string;
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -25,6 +26,7 @@ export const Button = ({
   label,
   isActive = false,
   icon,
+  className,
   onClick,
 }: ButtonProps) => {
   const mode = variant === 'ghost' ? 'button--ghost' : 'button--outline';
@@ -35,18 +37,19 @@ export const Button = ({
     <button
       type="button"
       value={value}
-      onClick={onClick}
       className={[
         'button-border-default',
         hoverClass,
         `button--${size}`,
         'background-color-transparent',
         'hover-cursor-pointer',
+        className,
         colorClass,
         activeClass,
         mode,
       ].join(' ')}
       style={{ borderColor }}
+      onClick={onClick}
     >
       {icon ? icon : label}
     </button>

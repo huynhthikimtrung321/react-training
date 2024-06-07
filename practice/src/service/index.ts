@@ -11,11 +11,16 @@ interface PutParams<T> {
   body: Omit<T, 'id'>;
 }
 
+interface DeleteParams {
+  endpoint: string;
+  id: string;
+}
+
 export const service = {
-  post: async <T>({ endpoint, body }: PostParams<T>) => {
+  put: async <T>({ endpoint, body, id }: PutParams<T>) => {
     try {
-      const res = await fetch(`${BASE_API_URL}/${endpoint}`, {
-        method: 'POST',
+      const res = await fetch(`${BASE_API_URL}/${endpoint}/${id}`, {
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -28,17 +33,15 @@ export const service = {
       return { data: null, error: 'No data received' };
     }
   },
-
-  put: async <T>({ endpoint, body, id }: PutParams<T>) => {
+  delete: async ({ endpoint, id }: DeleteParams) => {
     try {
       const res = await fetch(`${BASE_API_URL}/${endpoint}/${id}`, {
-        method: 'PUT',
+        method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(body),
       });
-      const data: T = await res.json();
+      const data = await res.json();
 
       return { data, error: null };
     } catch (error) {
