@@ -1,5 +1,10 @@
 const BASE_API_URL = process.env['BASE_API_URL'] ?? '';
 
+interface PostParams<T> {
+  endpoint: string;
+  body: Omit<T, 'id'>;
+}
+
 interface PutParams<T> {
   endpoint: string;
   id: string;
