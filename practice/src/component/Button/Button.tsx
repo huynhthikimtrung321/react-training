@@ -24,6 +24,7 @@ export const Button = ({
   size = 'medium',
   borderColor,
   label,
+  value,
   isActive = false,
   icon,
   className,

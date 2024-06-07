@@ -1,14 +1,14 @@
 import { Meta, StoryObj } from '@storybook/react/*';
-import { CardHeader } from '..';
+import { CardFooter } from '..';
 
 const meta = {
-  title: 'Card/CardHeader',
-  component: CardHeader,
+  title: 'Card/CardFooter',
+  component: CardFooter,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof CardHeader>;
+} satisfies Meta<typeof CardFooter>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
