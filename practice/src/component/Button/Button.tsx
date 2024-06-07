@@ -1,5 +1,3 @@
-import { MouseEvent } from 'react';
-
 import './Button.css';
 import { MouseEvent } from 'react';
 
