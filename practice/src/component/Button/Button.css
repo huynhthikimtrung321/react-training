@@ -1,0 +1,42 @@
+@import url('../styles/main.css');
+
+.button-border-default {
+  border: 1px solid transparent;
+}
+
+.button--ghost {
+  &.hover-color:hover {
+    color: var(--color-primary);
+  }
+
+  &.hover-underline:hover {
+    text-decoration: underline;
+  }
+}
+
+.button--outline {
+  margin: 3px;
+  background-color: transparent;
+
+  &:hover {
+    border-radius: 2px;
+    border: 1px solid var(--color-primary);
+  }
+}
+
+.button-active {
+  box-shadow: 1px 1px 3px 2px var(--color-primary);
+}
+
+.button--small {
+  padding: 2px 7px;
+}
+
+.button--medium {
+  font-size: 30px;
+  padding: 11px 20px 10px;
+}
+
+.hover-cursor-pointer:hover {
+  cursor: pointer;
+}
