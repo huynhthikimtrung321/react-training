@@ -2,17 +2,20 @@ import { Filter, Item } from '../../type';
 import { Button } from '..';
 import './CardFooter.css';
 import { Dispatch, MouseEvent } from 'react';
+import { service } from '../../service';
 
 interface CardFooterProps {
   items: Item[];
   filters: Filter[];
   setFilters: Dispatch<React.SetStateAction<Filter[]>>;
+  fetchItems: () => Promise<void>;
 }
 
 export const CardFooter = ({
   items = [],
   filters,
   setFilters,
+  fetchItems,
 }: CardFooterProps) => {
   const activeItemsLength = items.filter(
     item => item.isCompleted === false
@@ -28,6 +31,23 @@ export const CardFooter = ({
         : (filter.isActive = false)
     );
     setFilters(newFilters);
+  };
+
+  const handleDeleteCompleted = async () => {
+    const isConfirmed = confirm(
+      'Are you sure to delete all the completed items?'
+    );
+    if (!isConfirmed) {
+      return;
+    }
+
+    const promises: Promise<unknown>[] = [];
+    items.forEach(
+      ({ isCompleted, id }) =>
+        isCompleted && promises.push(service.delete({ endpoint: 'tasks', id }))
+    );
+    await Promise.all(promises);
+    await fetchItems();
   };
 
   return (
@@ -51,6 +71,7 @@ export const CardFooter = ({
         hover="underline"
         size="small"
         label="Clear completed"
+        onClick={handleDeleteCompleted}
       />
     </section>
   );
